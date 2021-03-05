@@ -33,6 +33,10 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+ 
+
+
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -52,8 +56,19 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(string) {
+    if (string === "teacher" || string === "student") {
+      return this.price * 0.75;
+    } 
+    else if (string === "public") {
+      return this.price * 0.9;
+    }
+  }
 }
+burger.discount("teacher")
+
+
+
 
 
 
@@ -77,6 +92,7 @@ Using the reviews array above:
 
 
 
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Using the reviews array above do the following: (no function needed) 
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
@@ -90,6 +106,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+
 
 
 
